@@ -29,13 +29,17 @@ def scan_locals():
 							str_v=line[line.find('g ')+2:line.find(',')] 		#holds v0/v1/v2...
 							const_string_line=count 				#holds the const-string line
 							string_to_cut=line[line.find('"')+1:len(line)-2] 	#holds the string to cut
+							print(string_to_cut)
+							if(string_to_cut=='\\n' or string_to_cut=='\\t' or string_to_cut=='\\r'):
+								print("hello")
+								continue
 							firstpart= '"'+string_to_cut[:int(len(string_to_cut)/2)]+'"'
 							secondpart='"'+string_to_cut[int(len(string_to_cut)/2):]+'"'
 							new_v=str(locals_num+1)
 							#print(string_to_cut)
 							add_values_in_dict(locals_change_to,locals_line-1,["    .locals "+new_v])
 							add_values_in_dict(string_change_to,const_string_line-1,[str_v,
-							"    const-string "+str_v+", "+firstpart+"\n\n    const-string v"+new_v+", "+secondpart+"\n\n    invoke-direct {"+str_v+"}, Ljava/lang/StringBuilder;-><init>()V\n\n    invoke-virtual {"+str_v+", "+str_v+"}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;\n\n    invoke-virtual {"+str_v+", v"+new_v+"}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;\n\n    invoke-virtual {"+str_v+"}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;\n\n    move-result-object "+str_v+""])							
+							"    const-string "+str_v+", "+firstpart+"\n\n    const-string v"+new_v+", "+secondpart+"\n\n    invoke-virtual {"+str_v+", "+str_v+"}, Ljava/lang/String;->append(Ljava/lang/String;)Ljava/lang/String;\n\n    invoke-virtual {"+str_v+", v"+new_v+"}, Ljava/lang/String;->append(Ljava/lang/String;)Ljava/lang/String;\n\n    invoke-virtual {"+str_v+"}, Ljava/lang/String;->toString()Ljava/lang/String;\n\n    move-result-object "+str_v+""])							
 
 					elif ".end method" in line:
 						break
