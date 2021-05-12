@@ -2,7 +2,9 @@
 
 [Overleaf Document](https://www.overleaf.com/read/fnqvkdtqjjnj)
 
-***code must be in current apk directory***
+
+
+## ***code must be in current apk directory***
 
 scan_and_replace activation code: 
 
