@@ -4,7 +4,7 @@
 
 
 
-## ***code must be in current apk directory***
+## ***code must be in current apk directory:***
 
 scan_and_replace activation code: 
 
