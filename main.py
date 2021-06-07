@@ -28,3 +28,11 @@ elif type=='c':
 	close_apk()
 else:
 	print("Wrong Input")
+	
+	"""
+		apktool b magicDate
+		cd magicDate
+		cd dist
+		keytool -alias bob -genkey -v -keystore mykey.keystore 
+		jarsigner -signedjar new.apk -keystore mykey.keystore magicDate.apk bob
+	"""
