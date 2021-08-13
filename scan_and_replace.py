@@ -76,9 +76,10 @@ def scan_locals():
 	flag = False
 	can_use_after_string=[]
 	can_use_locals= []
+	os.chdir(os.getcwd()+"/"+sys.argv[1])
 	files = Path().cwd().glob("**/*.smali")
 	for curr in files:
-		#print (curr)
+		print (curr)
 		count=0
 		locals_change_to = {}
 		string_change_to = {}
@@ -159,24 +160,40 @@ def scan_locals():
 									continue
 								if can_use_after_string:
 									continue
+								if ("\\\'t" in line):
+									continue
 								pattern1 = r"(0\\u.*)"
-								pattern2 = r"(\\.*\\)"
+								pattern2 = r"(\\.*\\){1}"
 								pattern3 = r"(([a-zA-Z0-9]+\.){2}([_a-zA-Z0-9]))"
 								pattern4 = r"(\\u.*)"
+								pattern5 = r"(\\.%.\\)"
+								pattern6 = r"('.+')"
 								if re.search(pattern1, line):
+									#print('yes!')
+									continue								
+								elif re.search(pattern4, line):
+									#print('yes!')
 									continue
-								if re.search(pattern4, line):
+								elif re.search(pattern5, line):
+									#print('yes!')
 									continue
-								if re.search(pattern2,line):
-									match=re.search(pattern2,line)
-									firstpart= '"'+string_to_cut[:match.end()]+'"'
-									secondpart='"'+string_to_cut[match.end():]+'"'	
+								elif re.search(pattern6, line):
+									match=re.search(pattern6,line)
+									firstpart= '"'+string_to_cut[:match.start()]+'"'
+									secondpart='"'+string_to_cut[match.start():]+'"'	
+									#print(match.end())									
+
+									
+								#if re.search(pattern2,line):
+								#	match=re.search(pattern2,line)
+								#	firstpart= '"'+string_to_cut[:match.start()]+'"'
+								#	secondpart='"'+string_to_cut[match.start():]+'"'	
 								else:
 									firstpart= '"'+string_to_cut[:int(len(string_to_cut)/2)]+'"'
 									secondpart='"'+string_to_cut[int(len(string_to_cut)/2):]+'"'
-								if ( firstpart[len(firstpart)-2] == '\\' ):
-									print(firstpart[len(firstpart)-2])
-									continue
+								#if ( firstpart[len(firstpart)-2] == '\\' ):
+								#	print(firstpart[len(firstpart)-2])
+								#	continue
 								if flag== False:
 									if can_use_locals:
 										new_v=str(can_use_locals[0])
