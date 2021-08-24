@@ -198,8 +198,8 @@ def scan_locals():
                                 # if ( firstpart[len(firstpart)-2] == '\\' ):
                                 #	print(firstpart[len(firstpart)-2])
                                 #	continue
-                                if secondpart.find('""') or firstpart.find('""'):
-                                    continue
+                                #if secondpart.find('""') or firstpart.find('""'):
+                                #   continue
                                 if flag == False:
                                     if can_use_locals:
                                         new_v = str(can_use_locals[0])
