@@ -59,7 +59,11 @@ Then we organize all the founded apps in one directory and performs our attack o
 - [mal_feature_ext.py](https://github.com/nivtal9/Sec-SVM-Final-Project/blob/main/mal_feature_ext.py) - This script gets all the manipulated founded apps that we found in fined.py and performs feature extraction.
 The output is one json that contains the features of those post-attack apps.
 - [replace_mal.py](https://github.com/nivtal9/Sec-SVM-Final-Project/blob/main/replace_mal.py) - This script uses the new json file that we got from previous script and then scanning the new test label places of 1’s and replaces respectively a feature from our new json instead a malware feature in the new test dataset. After all the replacement we want to run Sec-svm again on the new created dataset, so we replace the train and test old json’s with the newly created json’s.
+- [only_mal.py](https://github.com/nivtal9/Sec-SVM-Final-Project/blob/main/only_mal.py) –  This script behaves like replace_mal.py but without the feature replacement at the end and taking only malicious apps from the test dataset.
+- [only_mal_with_attack.py](https://github.com/nivtal9/Sec-SVM-Final-Project/blob/main/only_mal_with_attack.py) – This script behaves like replace_mal.py with feature replacement but taking only malicious apps from the test dataset.
 
+
+# Results, Conclusion and Testing Functionality are in [pptx in repository](https://github.com/nivtal9/Sec-SVM-Final-Project/blob/main/Sec-svm-demonstration.pptx)
 
 
 
