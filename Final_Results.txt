@@ -1,0 +1,172 @@
+
+
+\\\ 5 runs with the original feature_ext and before our attak (20% test(Malicious and benign) and 80% train) :
+
+round 1:
+accuracy_score 0.9806325850468465
+recall_score 0.9806325850468465
+processing time is  21.198532104492188  seconds
+
+round 2:
+accuracy_score 0.9822674966987361
+recall_score 0.9822674966987361
+processing time is  21.743186473846436  seconds
+
+round 3:
+accuracy_score 0.9828456214528467
+recall_score 0.9828456214528467
+processing time is  20.32513451576233  seconds
+
+round 4:
+accuracy_score 0.9817015657423128
+recall_score 0.9817015657423128
+processing time is  21.39283776283264  seconds
+
+round 5:
+accuracy_score 0.9812613972206502
+recall_score 0.9812613972206502
+processing time is  20.686962127685547  seconds
+
+
+
+\\\ 5 runs with the original feature_ext and after our attak (20% test (Malicious and benign) and 80% train) :
+
+round 1:
+accuracy_score 0.9080734406438632
+recall_score 0.9080734406438632
+processing time is  37.82743859291077  seconds
+
+
+round 2:
+accuracy_score 0.9507042253521126
+recall_score 0.9507042253521126
+processing time is  22.61952781677246  seconds
+
+
+round3:
+accuracy_score 0.9368712273641852
+recall_score 0.9368712273641852
+processing time is  19.63769841194153  seconds
+
+round4:
+accuracy_score 0.9490065392354124
+recall_score 0.9490065392354124
+processing time is  26.12929940223694  seconds
+
+round 5:
+accuracy_score 0.9178034407418423
+recall_score 0.9178034407418423
+processing time is  31.12929940294153  seconds
+
+
+
+\\\ 5 runs with the original feature_ext and before our attak (20% test (only malicious apps) and 80% train) :
+round 1:
+accuracy_score 0.767200754005655
+recall_score 0.767200754005655
+processing time is  16.595704317092896  seconds
+
+round 2:
+accuracy_score 0.7255639097744361
+recall_score 0.7255639097744361
+processing time is  16.698278188705444  seconds
+
+round 3:
+accuracy_score 0.780209324452902
+recall_score 0.780209324452902
+processing time is  16.596258401870728  seconds
+
+round 4:
+accuracy_score 0.7382488479262673
+recall_score 0.7382488479262673
+processing time is  17.889286279678345  seconds
+
+round 5:
+accuracy_score 0.7868112014453478
+recall_score 0.7868112014453478
+processing time is  16.92432141304016  seconds
+
+\\\ 5 runs with the original feature_ext and after our attak (20% test (only malicious apps) and 80% train) :
+round 1:
+accuracy_score 0.7200557103064067
+recall_score 0.7200557103064067
+processing time is  16.681248426437378  seconds
+
+round 2:
+accuracy_score 0.7330316742081447
+recall_score 0.7330316742081447
+processing time is  16.747588872909546  seconds
+
+round 3:
+accuracy_score 0.7386888273314867
+recall_score 0.7386888273314867
+processing time is  16.92811417579651  seconds
+
+round 4:
+accuracy_score 0.6990909090909091
+recall_score 0.6990909090909091
+processing time is  16.556997537612915  seconds
+
+round 5:
+accuracy_score 0.6927272727272727
+recall_score 0.6927272727272727
+processing time is  17.029787302017212  seconds
+
+
+
+
+\\\\\\\\\ 5 runs with 20% test (Malicious and benign) and 80% train after our attack with our improvement feature_ext :  
+
+round 1
+accuracy_score 0.9478118712273642
+recall_score 0.9478118712273642
+processing time is  23.42286252975464  seconds
+
+round 2
+accuracy_score 0.9481262575452716
+recall_score 0.9481262575452716
+processing time is  23.038261651992798  seconds
+
+round 3
+accuracy_score 0.9505155935613682
+recall_score 0.9505155935613682
+processing time is  23.573590517044067  seconds
+
+round 4
+accuracy_score 0.9503269617706237
+recall_score 0.9503269617706237
+processing time is  25.794708013534546  seconds
+
+round 5
+accuracy_score 0.9597869558704174
+recall_score 0.9597869558704174
+processing time is  22.422863643592798  seconds
+
+
+
+\\\\\\\\\ 5 runs with 20% test (only Malicious apps) and 80% train after our attack with our improvement feature_ext :
+round 1
+accuracy_score 0.798887859128823
+recall_score 0.798887859128823
+processing time is  18.77930784225464  seconds
+
+round 2
+accuracy_score 0.7286343612334801
+recall_score 0.7286343612334801
+processing time is  19.944028854370117  seconds
+
+round 3
+accuracy_score 0.7587476979742173
+recall_score 0.7587476979742173
+processing time is  25.262887477874756  seconds
+
+round 4
+accuracy_score 0.7523020257826888
+recall_score 0.7523020257826888
+processing time is  17.09636640548706  seconds
+
+round 5
+accuracy_score 0.7568281938325991
+recall_score 0.7568281938325991
+processing time is  31.155601263046265  seconds
+
